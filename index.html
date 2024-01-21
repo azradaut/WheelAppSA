@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WheelAppSA</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; 
+        }
+        .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: rgba(250, 250, 250, 0.95);
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      padding: 0 20px;
+      font-family: sans-serif;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .navbar a:hover {
+      color: #111;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/index.html"><strong>WheelAppSA</strong></a>
+        <a href="./web_bos/index.html">Mapa(BS)</a>
+        <a href="./web_en/index.html">Map(EN)</a>
+    </nav>
+
+    <script>
+        const links = document.querySelectorAll('.navbar a');
+        let currentContent;
+
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                if (currentContent) {
+                    document.body.removeChild(currentContent);
+                }
+
+                const target = link.href;
+                currentContent = document.createElement('div');
+                currentContent.innerHTML = '<object type="text/html" data="' + target + '" style="width: 100%; height: 100vh;"></object>';
+                document.body.appendChild(currentContent);
+            });
+        });
+    </script>
+</body>
+</html>
