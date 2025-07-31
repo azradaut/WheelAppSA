@@ -28,7 +28,7 @@ Each object is marked by accessibility level (Accessible, Partially Accessible, 
 
 ## Screenshots
 
-![Example 1]([./361b3a27-7d7d-43bd-9cfe-fa3625d2a3e5.png](https://github.com/azradaut/WheelAppSA/blob/master/mapabs.JPG))  
+![WheelAppSA Map Overview](https://github.com/azradaut/WheelAppSA/blob/master/mapabs.JPG?raw=true)
 
 ## Context
 
